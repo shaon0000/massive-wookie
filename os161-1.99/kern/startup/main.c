@@ -50,7 +50,7 @@
 #include <test.h>
 #include <version.h>
 #include "autoconf.h"  // for pseudoconfig
-
+#include "opt-A0.h"
 
 /*
  * These two pieces of data are maintained by the makefiles and build system.
@@ -206,7 +206,9 @@ void
 kmain(char *arguments)
 {
 	boot();
-
+    #if OPT_A0
+        hello();
+    #endif /* OPT_A0 */
 	menu(arguments);
 
 	/* Should not get here */

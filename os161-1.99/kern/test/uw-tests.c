@@ -61,7 +61,6 @@ add_thread(void *junk, unsigned long num)
 		if (use_locks) {
 			lock_acquire(testlock);
 		}
-
       /* This loop is unrolled to possibly avoid optimizations
        * and to provide more instructions that could be interrupted.
        * This may or may not be necessary.
